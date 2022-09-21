@@ -1,0 +1,30 @@
+<div id="<%= dom_id instrument %>">
+    <div class="card" style="width: 18rem;">
+        <% if instrument.iamge.present? %>
+        <%= image_tag instrument.iamge_url, class: "card-img-top" %>
+        <% else %> 
+          <img src="https://w0.peakpx.com/wallpaper/806/724/HD-wallpaper-acoustic-guitar-guitar-musical-instrument-brown.jpg" class="style_image" style="    height: 209px;" >
+				<% end %>  
+    <div class="card-body">
+      <h5 class="card-title"> <strong>Title:</strong>
+        <%= instrument.title %></h5>
+          <p class="card-text"><strong>Description:</strong>
+           <%= instrument.description %>
+          </p>
+          <p><strong>Model:</strong>
+           <%= instrument.model %>
+          </p>
+          <p><strong>Price:</strong>
+           <%= instrument.price %>
+          </p>
+          <p><strong>Finish:</strong>
+           <%= instrument.finish %>
+          </p>
+         <p><strong>Condition:</strong>
+          <%= instrument.condition %>
+        </p>
+        <p><%= link_to "Show this instrument", instrument, class: "btn btn-primary" %>
+        </p>
+    </div>
+    </div>
+</div>
